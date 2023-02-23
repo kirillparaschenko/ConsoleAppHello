@@ -8,8 +8,10 @@ namespace MyApp
         static void Main(string[] args)
         {
             //Lesson1_Task1();
-            Lesson2_Task1_Calculator();
-            Lesson2_Task2_RangeDetermination();
+            //Lesson2_Task1_Calculator();
+            //Lesson2_Task2_RangeDetermination();
+            Lesson2_Task3_RangeDetermination();
+
         }
         public static void Lesson1_Task1()
         {
@@ -48,9 +50,6 @@ namespace MyApp
             }
             Console.WriteLine($"{operand1} {sign} {operand2} = {result}");
         }
-        /*Напишите программу определения, попадает ли указанное пользователем число от 0 до 100 в числовой промежуток[0 - 14][15 - 35][36 - 49][50 - 100].
-Если да, то укажите, в какой именно промежуток.
-Если пользователь указывает число, не входящее ни в один из имеющихся числовых промежутков, то выводится соответствующее сообщение.*/
         public static void Lesson2_Task2_RangeDetermination()
         {
             Console.Write("Enter number: ");
@@ -73,6 +72,31 @@ namespace MyApp
                 Console.WriteLine($"{number} in Range [50 - 100]");
             }
             else { Console.WriteLine($"{number} out of Range [0 - 100]"); }
+        }
+        /*Напишите программу русско-английский переводчик.
+Программа знает 10 слов о погоде.
+Требуется, чтобы пользователь вводил слово на русском языке, а программа давала ему перевод этого слова на английском языке.
+Если пользователь ввел слово, для которого отсутствует перевод, то следует вывести сообщение, что такого слова нет.*/
+        public static void Lesson2_Task3_RangeDetermination() 
+        {
+            Console.Write("Введите слово: ");
+            string? word = Console.ReadLine();
+
+            string translation = word switch
+            {
+                "холодно" => "cold",
+                "тепло" => "warm",
+                "жарко" => "hot",
+                "морозно" => "frosty",
+                "солнечно" => "sunny",
+                "ясно" => "clear",
+                "душно" => "stuffy",
+                "облачно" => "cloudy",
+                "ветренно" => "windy",
+                "сухо" => "dry",
+                _ => "Unknown word"
+        };
+            Console.WriteLine($"{translation}");
         }
     }
 }
