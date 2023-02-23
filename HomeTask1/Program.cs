@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Transactions;
 using System.Xml.Linq;
 
 namespace MyApp
@@ -8,10 +9,11 @@ namespace MyApp
         static void Main(string[] args)
         {
             //Lesson1_Task1();
-            //Lesson2_Task1_Calculator();
-            //Lesson2_Task2_RangeDetermination();
+            Lesson2_Task1_Calculator();
+            Lesson2_Task2_RangeDetermination();
             Lesson2_Task3_RangeDetermination();
-
+            Lesson2_Task4_ParityCheck();
+            Lesson2_Task4_1_ParityCheck();
         }
         public static void Lesson1_Task1()
         {
@@ -67,17 +69,13 @@ namespace MyApp
             {
                 Console.WriteLine($"{number} in Range [36 - 49]");
             }
-            else if (x >= 50 && x <= 100) 
+            else if (x >= 50 && x <= 100)
             {
                 Console.WriteLine($"{number} in Range [50 - 100]");
             }
             else { Console.WriteLine($"{number} out of Range [0 - 100]"); }
         }
-        /*Напишите программу русско-английский переводчик.
-Программа знает 10 слов о погоде.
-Требуется, чтобы пользователь вводил слово на русском языке, а программа давала ему перевод этого слова на английском языке.
-Если пользователь ввел слово, для которого отсутствует перевод, то следует вывести сообщение, что такого слова нет.*/
-        public static void Lesson2_Task3_RangeDetermination() 
+        public static void Lesson2_Task3_RangeDetermination()
         {
             Console.Write("Введите слово: ");
             string? word = Console.ReadLine();
@@ -94,9 +92,41 @@ namespace MyApp
                 "облачно" => "cloudy",
                 "ветренно" => "windy",
                 "сухо" => "dry",
-                _ => "Unknown word"
-        };
+                _ => "Отсутствует в словаре"
+            };
             Console.WriteLine($"{translation}");
+        }
+
+        public static void Lesson2_Task4_ParityCheck()
+        {
+            Console.Write("Enter a whole number: ");
+            string? number = Console.ReadLine();
+            int x = Convert.ToInt32(number);
+            if (x % 2 == 0) 
+            {
+                Console.WriteLine($"{number} is even");
+            }
+            else
+            {
+                Console.WriteLine($"{number} is odd");
+            }
+        }
+
+        public static void Lesson2_Task4_1_ParityCheck()
+        {
+            Console.Write("Entera whole number: ");
+            string? number = Console.ReadLine();
+            double x = Convert.ToDouble(number);
+            double y = ((x / 2) * x);
+
+            if (y == Math.Round(y, 0))
+            {
+                Console.WriteLine($"{number} is even");
+            }
+            else
+            {
+                Console.WriteLine($"{number} is odd");
+            }
         }
     }
 }
