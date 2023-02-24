@@ -20,6 +20,7 @@ namespace MyApp
             string? name = Console.ReadLine();
             Console.WriteLine("Hello," + name + "!");
         }
+
         public static void Lesson2_Task1_Calculator()
         {
             double operand1 = 10.123;
@@ -52,6 +53,7 @@ namespace MyApp
             }
             Console.WriteLine($"{operand1} {sign} {operand2} = {result}");
         }
+
         public static void Lesson2_Task2_RangeDetermination()
         {
             Console.Write("Enter number: ");
