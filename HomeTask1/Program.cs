@@ -51,7 +51,9 @@ namespace MyApp
                     }
                     break;
             }
+
             Console.WriteLine($"{operand1} {sign} {operand2} = {result}");
+
         }
 
         public static void Lesson2_Task2_RangeDetermination()
