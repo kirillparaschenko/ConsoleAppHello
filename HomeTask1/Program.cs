@@ -20,7 +20,6 @@ namespace MyApp
             string? name = Console.ReadLine();
             Console.WriteLine("Hello," + name + "!");
         }
-
         public static void Lesson2_Task1_Calculator()
         {
             double operand1 = 10.123;
@@ -76,7 +75,6 @@ namespace MyApp
             }
             else { Console.WriteLine($"{number} out of Range [0 - 100]"); }
         }
-
         public static void Lesson2_Task3_RangeDetermination()
         {
             Console.Write("Введите слово: ");
@@ -132,3 +130,4 @@ namespace MyApp
         }
     }
 }
+
