@@ -1,27 +1,14 @@
 ﻿using System;
-using System.Transactions;
-using System.Xml.Linq;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace MyApp
+namespace ConsoleAppHello.HomeTasks
 {
-    internal class Program
+    internal class HomeWork2
     {
-        static void Main(string[] args)
-        {
-            //Lesson1_Task1();
-            Lesson2_Task1_Calculator();
-            Lesson2_Task2_RangeDetermination();
-            Lesson2_Task3_RangeDetermination();
-            Lesson2_Task4_ParityCheck();
-            Lesson2_Task4_1_ParityCheck();
-        }
-        public static void Lesson1_Task1()
-        {
-            string? name = Console.ReadLine();
-            Console.WriteLine("Hello," + name + "!");
-        }
-
-        public static void Lesson2_Task1_Calculator()
+        public static void Task1_Calculator()
         {
             double operand1 = 10.123;
             double operand2 = 6.789;
@@ -56,7 +43,7 @@ namespace MyApp
 
         }
 
-        public static void Lesson2_Task2_RangeDetermination()
+        public static void Task2_RangeDetermination()
         {
             Console.Write("Enter number: ");
             string? number = Console.ReadLine();
@@ -79,7 +66,7 @@ namespace MyApp
             }
             else { Console.WriteLine($"{number} out of Range [0 - 100]"); }
         }
-        public static void Lesson2_Task3_RangeDetermination()
+        public static void Task3_RangeDetermination()
         {
             Console.Write("Введите слово: ");
             string? word = Console.ReadLine();
@@ -101,12 +88,12 @@ namespace MyApp
             Console.WriteLine($"{translation}");
         }
 
-        public static void Lesson2_Task4_ParityCheck()
+        public static void Task4_ParityCheck()
         {
             Console.Write("Enter a whole number: ");
             string? number = Console.ReadLine();
             int x = Convert.ToInt32(number);
-            if (x % 2 == 0) 
+            if (x % 2 == 0)
             {
                 Console.WriteLine($"{number} is even");
             }
@@ -116,7 +103,7 @@ namespace MyApp
             }
         }
 
-        public static void Lesson2_Task4_1_ParityCheck()
+        public static void Task4_1_ParityCheck()
         {
             Console.Write("Entera whole number: ");
             string? number = Console.ReadLine();
@@ -134,4 +121,3 @@ namespace MyApp
         }
     }
 }
-
