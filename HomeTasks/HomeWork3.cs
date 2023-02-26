@@ -103,9 +103,61 @@ namespace ConsoleAppHello.HomeTasks
 
             double average = sum / n;
             Console.WriteLine($"Average value: {average}");
-
         }
 
+        /// <summary>
+        /// 3. Создайте 2 массива из 5 чисел. Выведите массивы на консоль в двух отдельных строках.
+        /// Посчитайте среднее арифметическое элементов каждого массива и сообщите,
+        /// для какого из массивов это значение оказалось больше (либо сообщите, что их средние арифметические равны).  
+        /// </summary>
+        public static void Task3()
+        {
+            Random random = new Random();
+            int[] array1 = new int[5];
+            int[] array2 = new int[5];
 
+            for (int i = 0; i < array1.Length; i++)
+            {
+                array1[i] = (int)random.NextInt64(0, 100);
+                Console.Write(array1[i] + " ");
+            }
+            Console.WriteLine();
+
+            for (int i = 0; i < array2.Length; i++)
+            {
+                array2[i] = (int)random.NextInt64(0, 100);
+                Console.Write(array2[i] + " ");
+            }
+            Console.WriteLine();
+
+            double sum1 = 0;
+            for (int i = 0; i < array1.Length; i++)
+            {
+                sum1 += array1[i];
+            }
+
+            double average1 = sum1 / 5;
+
+            double sum2 = 0;
+            for (int i = 0; i < array2.Length; i++)
+            {
+                sum2 += array2[i];
+            }
+
+            double average2 = sum2 / 5;
+
+            if (average1 > average2) 
+            {
+                Console.WriteLine($"Average value of Arra1 {average1} > {average2} Average value of Arra2");
+            }
+            else if (average1 < average2 )
+            {
+                Console.WriteLine($"Average value of Arra1 {average1} < {average2} Average value of Arra2");
+            }
+            else 
+            {
+                Console.WriteLine($"Average value of Arra1 {average1} = {average2} Average value of Arra2");
+            }
+        }
     }
 }

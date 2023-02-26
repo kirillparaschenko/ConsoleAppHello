@@ -16,7 +16,8 @@ namespace ConsoleAppHello.HomeTasks
             //HomeWork2.Task4_1_ParityCheck();
             //HomeWork3.Task0();
             //HomeWork3.Task1();
-            HomeWork3.Task2();
+            //HomeWork3.Task2();
+            HomeWork3.Task3();
         }
     }
 }
