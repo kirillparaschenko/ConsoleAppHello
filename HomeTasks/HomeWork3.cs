@@ -29,7 +29,7 @@ namespace ConsoleAppHello.HomeTasks
                    result = "in array";
                 }
             }
-            Console.Write($"{x} {result}");
+            Console.WriteLine($"{x} {result}");
         }
 
         /// <summary>
@@ -37,22 +37,42 @@ namespace ConsoleAppHello.HomeTasks
         /// Пусть число задается с консоли.Если такого числа нет - выведите сообщения об этом.
         /// В результате должен быть новый массив без указанного числа. 
         /// </summary>
-        //public static void Task1()
-        //{
-        //    int[] numbers = { 1, 22, -4, 25, 56, 17, 4, 34, 99 };
+        public static void Task1()
+        {
+            int[] numbers1 = new int [9]{ 1, 22, 4, 25, 56, 17, 4, 34, 99 };
 
-        //    Console.Write("Enter number: ");
-        //    string? number = Console.ReadLine();
-        //    int x = Convert.ToInt32(number);
+            Console.Write("Enter number: ");
+            string? number = Console.ReadLine();
+            int x = Convert.ToInt32(number);
+            int countOfnumber = 0;
 
-        //    foreach (int i in numbers)
-        //    {
-        //        if (i != x)
-        //        {
-        //            Console.WriteLine($"{number} outside array");
-        //        }
-        //    }
-        //}
+            foreach (int i in numbers1)
+            {
+                if (i == x)
+                {
+                    countOfnumber++;
+                }
+            }
+
+            if (countOfnumber > 0)
+            {
+                int[] numbers2 = new int[9 - countOfnumber];
+
+                for (int i = 0, j = 0; i < numbers1.Length; i++)
+                {
+                    if (numbers1[i] != x)
+                    {
+                        numbers2[j] = numbers1[i];
+                        Console.Write(numbers2[j++] + " ");
+                    }
+                }
+                Console.WriteLine();
+            }
+            else 
+            {
+                Console.WriteLine($"{x} outside array");
+            };
+        }
 
         /// <summary>
         /// 2. Создайте и заполните массив случайным числами и выведете максимальное, минимальное и среднее значение.
@@ -112,6 +132,7 @@ namespace ConsoleAppHello.HomeTasks
         /// </summary>
         public static void Task3()
         {
+            Console.WriteLine("Task3");
             Random random = new Random();
             int[] array1 = new int[5];
             int[] array2 = new int[5];
@@ -148,15 +169,15 @@ namespace ConsoleAppHello.HomeTasks
 
             if (average1 > average2) 
             {
-                Console.WriteLine($"Average value of Arra1 {average1} > {average2} Average value of Arra2");
+                Console.WriteLine($"Average value of Array1 {average1} > {average2} Average value of Array2");
             }
             else if (average1 < average2 )
             {
-                Console.WriteLine($"Average value of Arra1 {average1} < {average2} Average value of Arra2");
+                Console.WriteLine($"Average value of Array1 {average1} < {average2} Average value of Array2");
             }
             else 
             {
-                Console.WriteLine($"Average value of Arra1 {average1} = {average2} Average value of Arra2");
+                Console.WriteLine($"Average value of Array1 {average1} = {average2} Average value of Array2");
             }
         }
     }
