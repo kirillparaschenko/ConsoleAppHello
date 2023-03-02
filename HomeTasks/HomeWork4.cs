@@ -36,7 +36,29 @@ namespace ConsoleAppHello.HomeTasks
             string word5 = "lesons";
 
             Console.WriteLine($"\"{word1}\" \"{word2}\" \"{word3}\" \"{word4}\" \"{word5}\".");
+        }
 
+        /// <summary>
+        /// 3. Дана строка: teamwithsomeofexcersicesabcwanttomakeitbetter.
+        /// Необходимо найти в данной строке "abc", записав всё что до этих символов в первую переменную, а также всё, что после них во вторую.
+        /// Результат вывести в консоль.
+        /// </summary>
+        public static void Task3()
+        {
+            string s1 = "teamwithsomeofexcersicesabcwanttomakeitbetter.";
+
+            s1 = s1.Replace("abc", " ");
+            string[] words = s1.Split(' ');
+
+            string word1 = words[0];
+            string word2 = words[1];
+
+            Console.WriteLine($"{word1}\n{word2}");
+
+            //foreach (string word in words)
+            //{
+            //    Console.WriteLine();
+            //}
 
         }
     }
