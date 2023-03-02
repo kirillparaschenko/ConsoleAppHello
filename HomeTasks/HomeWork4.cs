@@ -54,12 +54,30 @@ namespace ConsoleAppHello.HomeTasks
             string word2 = words[1];
 
             Console.WriteLine($"{word1}\n{word2}");
+        }
 
-            //foreach (string word in words)
-            //{
-            //    Console.WriteLine();
-            //}
+        /// <summary>
+        /// Дана строка: Плохой день.
+        /// Необходимо с помощью метода substring удалить слово "плохой".
+        /// После чего необходимо используя команду insert создать строку со значением: Хороший день!!!!!!!!!.
+        /// Заменить последний "!" на "?"
+        /// </summary>
+        public static void Task4()
+        {
+            string s1 = "Плохой день";
 
+            s1 = s1.Substring(7);
+
+            string substring = "Хороший ";
+            s1 = s1.Insert(0, substring) + "!!!!!!!!!";
+
+            int lasIindex = s1.LastIndexOf("!");
+            s1 = s1.Remove(lasIindex) + "?";
+           
+
+            //Regex regex = new Regex(@"!$");
+            //string result = regex.Replace(s1, "?");
+            Console.WriteLine(s1);
         }
     }
 }
