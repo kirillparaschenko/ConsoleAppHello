@@ -22,5 +22,22 @@ namespace ConsoleAppHello.HomeTasks
             Console.WriteLine(s1);
         }
 
+        /// <summary>
+        /// 2. Используя метод вывода значения в консоль, выполните конкатенацию слов и выведите на экран следующую фразу:
+        /// Welcome to the TMS lesons.
+        /// Каждое слово должно быть записано отдельно и взято в кавычки, например "Welcome". Не забывайте о пробелах после каждого слова
+        /// </summary>
+        public static void Task2()
+        {
+            string word1 = "Welcome";
+            string word2 = "to";
+            string word3 = "the";
+            string word4 = "TMS";
+            string word5 = "lesons";
+
+            Console.WriteLine($"\"{word1}\" \"{word2}\" \"{word3}\" \"{word4}\" \"{word5}\".");
+
+
+        }
     }
 }
