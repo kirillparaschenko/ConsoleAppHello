@@ -73,10 +73,7 @@ namespace ConsoleAppHello.HomeTasks
 
             int lasIindex = s1.LastIndexOf("!");
             s1 = s1.Remove(lasIindex) + "?";
-           
 
-            //Regex regex = new Regex(@"!$");
-            //string result = regex.Replace(s1, "?");
             Console.WriteLine(s1);
         }
     }

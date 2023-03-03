@@ -18,9 +18,9 @@ namespace ConsoleAppHello.HomeTasks
             //HomeWork3.Task1();
             //HomeWork3.Task2();
             //HomeWork3.Task3();
-            //HomeWork4.Task1();
-            //HomeWork4.Task2();
-            //HomeWork4.Task3();
+            HomeWork4.Task1();
+            HomeWork4.Task2();
+            HomeWork4.Task3();
             HomeWork4.Task4();
         }
     }
