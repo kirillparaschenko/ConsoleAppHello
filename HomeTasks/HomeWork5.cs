@@ -50,14 +50,12 @@ namespace ConsoleAppHello.HomeTasks
             }
         }
 
-        public Phone(int number, string model, double weight)
+        public Phone(int number, string model, double weight) : this(number, model)
         {
-            this.number = number;
-            this.model = model;
             this.weight = weight;
         }
 
-        public Phone(int number, string model) : this(number, model, 0)
+        public Phone(int number, string model)
         {
             this.number = number;
             this.model = model;
@@ -67,4 +65,50 @@ namespace ConsoleAppHello.HomeTasks
         {
         }
     }
+
+    /// <summary>
+    /// 2. Создать класс CreditCard c полями номер счета, текущая сумма на счету.
+    /// Добавьте метод, который позволяет начислять сумму на кредитную карточку.
+    /// Добавьте метод, который позволяет снимать с карточки некоторую сумму.
+    /// Добавьте метод, который выводит текущую информацию о карточке.
+    /// Напишите программу, которая создает три объекта класса CreditCard у которых заданы номер счета и начальная сумма.
+    /// Тестовый сценарий для проверки:
+    /// Положите деньги на первые две карточки и снимите с третьей.
+    /// Выведите на экран текущее состояние всех трех карточек.
+    /// </summary>
+    internal class CreditCard
+    {
+        public string cardNumber;
+        public double currentSum;
+
+        public void GetInfo()
+        {
+            Console.WriteLine($"Card number: {cardNumber}\nCurrent sum: {currentSum}");
+        }
+
+        public double AddSum(double sum)
+        {
+            return currentSum += sum;
+        }
+
+        public double SubtractSum(double sum)
+        {
+            if (sum < currentSum)
+            {
+                return currentSum -= sum;
+            }
+            else
+            {
+                Console.WriteLine("Operation cancelled");
+                return currentSum;
+            }
+        }
+
+        public CreditCard(string cardNumber, double currentSum)
+        {
+            this.cardNumber = cardNumber;
+            this.currentSum = currentSum;
+        }   
+    }
 }
+
