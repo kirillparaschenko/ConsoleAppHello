@@ -42,7 +42,7 @@ namespace ConsoleAppHello.HomeTasks
 
             creditCard1.AddSum(500);
             creditCard2.AddSum(500);
-            creditCard3.SubtractSum(5000);
+            creditCard3.SubtractSum(500);
 
             creditCard1.GetInfo();
             creditCard2.GetInfo();
