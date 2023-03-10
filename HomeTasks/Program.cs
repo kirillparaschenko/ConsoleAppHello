@@ -1,4 +1,5 @@
 ﻿using ConsoleAppHello.HomeTasks.HomeWork6;
+using ConsoleAppHello.HomeTasks.HomeWork6.Clinica;
 using ConsoleAppHello.HomeTasks.HomeWork6.Rectangles;
 using ConsoleAppHello.HomeTasks.HomeWork6.Triangles;
 using System;
@@ -26,6 +27,15 @@ namespace ConsoleAppHello.HomeTasks
                 double square = obj.GetSquare();
                 Console.WriteLine(square);
             }
+
+            //Task 2
+            //Создать объект класса «Пациент» и добавить пациенту план лечения.
+            //Также создать метод, который будет назначать врача пациенту согласно  плану лечения.
+
+            Patient patient1 = new Patient("Ivan");
+            TreatmentPlan plan1 = new TreatmentPlan (patient1, 1);
+            plan1.AsignDoctor();
+
         }
     }
 }
