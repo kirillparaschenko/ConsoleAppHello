@@ -82,6 +82,11 @@ namespace ConsoleAppHello.HomeTasks
                 }
             }
 
+            bus.PrintTransportType(bus);
+            routetaxi.PrintTransportType(routetaxi);
+            tramcar.PrintTransportType(tramcar);
+            trollebus.PrintTransportType(trollebus);
+
             //Task 4
             //Создать базу (массив) из n машин, вывести полную информацию из базы на экран,
             //а также организовать поиск машин, удовлетворяющих требованиям грузоподъемности.

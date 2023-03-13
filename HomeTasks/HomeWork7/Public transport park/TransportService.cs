@@ -8,9 +8,6 @@ namespace ConsoleAppHello.HomeTasks.HomeWork7.Public_transport_park
 {
     public interface ITransportService
     {
-        //public void PrintTransportType(Transport transport)
-        //{
-        //    transport.GetInfo();
-        //}
+        void PrintTransportType(Transport transport);
     }
 }

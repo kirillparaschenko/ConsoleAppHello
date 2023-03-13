@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppHello.HomeTasks.HomeWork7.Public_transport_park
 {
-    abstract class Transport : IComparable<Transport>, ITransportService
+    public abstract class Transport : IComparable<Transport>, ITransportService
     {
         public abstract string Number { get; set; }
         public abstract string EndStation { get; set; }
@@ -27,6 +27,11 @@ namespace ConsoleAppHello.HomeTasks.HomeWork7.Public_transport_park
         public int CompareTo(Transport? transport)
         {
             return Seats - transport.Seats;
+        }
+
+        public void PrintTransportType(Transport transport)
+        {
+            transport.GetInfo();
         }
     }
 }
