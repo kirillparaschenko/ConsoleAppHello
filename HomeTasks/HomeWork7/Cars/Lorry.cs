@@ -8,10 +8,10 @@ namespace ConsoleAppHello.HomeTasks.HomeWork7.Cars
 {
     internal class Lorry : Auto
     {
-        public bool IfHaveTrailer;
-        public Lorry(string model, string number, int speed, int сarrying, bool ifHaveTrailer) : base(model, number, speed, сarrying)
+        private readonly bool isTrailer;
+        public Lorry(string model, string number, int speed, int сarrying, bool isTrailer) : base(model, number, speed, сarrying)
         {
-            IfHaveTrailer = ifHaveTrailer;
+            this.isTrailer = isTrailer;
             Carrying = CalculateCarrying();
         }
 
@@ -22,7 +22,7 @@ namespace ConsoleAppHello.HomeTasks.HomeWork7.Cars
 
         public override int CalculateCarrying()
         {
-            if (IfHaveTrailer == true)
+            if (isTrailer)
             {
                 return Carrying * 2;
             }
@@ -31,7 +31,7 @@ namespace ConsoleAppHello.HomeTasks.HomeWork7.Cars
 
         public override void GetInfo()
         {
-            Console.WriteLine($"Lorry: {Model}, Number: {Number}, Speed: {Speed}, Carrying: {Carrying}, Trailer: {IfHaveTrailer}");
+            Console.WriteLine($"Lorry: {Model}, Number: {Number}, Speed: {Speed}, Carrying: {Carrying}, Trailer: {isTrailer}");
         }
     }
 }

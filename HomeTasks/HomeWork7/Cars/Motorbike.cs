@@ -8,10 +8,10 @@ namespace ConsoleAppHello.HomeTasks.HomeWork7.Cars
 {
     internal class Motorbike : Auto
     {
-        public bool IfHaveWheelchair;
-        public Motorbike(string model, string number, int speed, int сarrying, bool ifhavewheelchair) : base(model, number, speed, сarrying)
+        private readonly bool isWheelchair;
+        public Motorbike(string model, string number, int speed, int сarrying, bool iswheelchair) : base(model, number, speed, сarrying)
         {
-            IfHaveWheelchair = ifhavewheelchair;
+            this.isWheelchair = iswheelchair;
             Carrying = CalculateCarrying();
         }
 
@@ -22,16 +22,13 @@ namespace ConsoleAppHello.HomeTasks.HomeWork7.Cars
 
         public override int CalculateCarrying()
         {
-            if (IfHaveWheelchair == false) 
-            {
-                return 0;
-            }
-            else return Carrying;
+            var result = !isWheelchair ? 0 : Carrying;
+            return result;
         }
 
         public override void GetInfo()
         {
-            Console.WriteLine($"Motorbike: {Model}, Number: {Number}, Speed: {Speed}, Carrying: {Carrying}, Wheelchair: {IfHaveWheelchair}");
+            Console.WriteLine($"Motorbike: {Model}, Number: {Number}, Speed: {Speed}, Carrying: {Carrying}, Wheelchair: {isWheelchair}");
         }
     }
 }
