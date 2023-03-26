@@ -26,7 +26,7 @@ namespace ConsoleAppHello.HomeTasks.HomeWork8
             Console.WriteLine($"{Name} Price: {Price}\n");
             foreach(var item in Products) 
             {
-                Console.Write(item.Name + ", ");
+                Console.Write(item.Name + " ");
             }
         }
         public void CheckExpirationDate() 
