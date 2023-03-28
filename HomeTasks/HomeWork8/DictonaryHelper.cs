@@ -13,6 +13,7 @@ namespace ConsoleAppHello.HomeTasks.HomeWork8
         {
             this.Products = products;
         }
+
         public void GetKeyValue()
         {
             foreach (var item in Products)
@@ -20,6 +21,7 @@ namespace ConsoleAppHello.HomeTasks.HomeWork8
                 Console.WriteLine($"Name = {item.Key.Name}, Count = {item.Value}");
             }
         }
+
         public void GetKeyName()
         {
             foreach (var item in Products)
@@ -27,6 +29,7 @@ namespace ConsoleAppHello.HomeTasks.HomeWork8
                 Console.WriteLine(item.Key.Name);
             }
         }
+
         public void GetValue() 
         {
             foreach (var item in Products)

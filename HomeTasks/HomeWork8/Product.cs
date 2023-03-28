@@ -24,10 +24,12 @@ namespace ConsoleAppHello.HomeTasks.HomeWork8
             this.Date = date;
             this.ExpirationDate = expirationDate;
         }
+
         public virtual void GetInfo() 
         {
             Console.WriteLine($"{Name} Price: {Price}, Date: {Date.ToString("d")}, Expiration Date {ExpirationDate.ToString("d")} ");
         }
+
         public void CheckExpirationDate()
         {
             if (ExpirationDate < DateTime.Now)

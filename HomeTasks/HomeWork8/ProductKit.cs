@@ -15,12 +15,14 @@ namespace ConsoleAppHello.HomeTasks.HomeWork8
         public string Name { get; set; }
         public double Price { get; set; }
         public List<Product> Products { get; set;}
+
         public ProductKit(string name, double price, List<Product> products) 
         {
             this.Name = name;
             this.Price = price;
             this.Products = products;
         }
+
         public void GetInfo() 
         {
             Console.WriteLine($"{Name} Price: {Price}\n");
@@ -29,6 +31,7 @@ namespace ConsoleAppHello.HomeTasks.HomeWork8
                 Console.Write(item.Name + " ");
             }
         }
+
         public void CheckExpirationDate() 
         {
             foreach(var item in Products)
