@@ -25,10 +25,12 @@ namespace ConsoleAppHello.HomeTasks.HomeWork9
             this.X = x;
             this.Y = y;
         }
+
         public void GetPoint()
         {
             Console.WriteLine($"x = {X}, y = {Y}");
         }
+
         public static double Distance(Point<double> p1, Point<double> p2)
         {
             double result;
@@ -36,6 +38,5 @@ namespace ConsoleAppHello.HomeTasks.HomeWork9
             Console.WriteLine($"Distance between Point 1 and Point 2: {result}");
             return result;
         }
-
     }
 }

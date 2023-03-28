@@ -14,22 +14,25 @@ namespace ConsoleAppHello.HomeTasks.HomeWork9
     public class MySuperClass<T>
     {
         public List<T> SuperList { get; set; }
+
         public void AddItem(T item)
         {
             SuperList.Add(item);
         }
+
         public void RemoveItem(T item)
         {
             SuperList.Remove(item);
         }
+
         public T GetItem(int index) 
         {
             return SuperList[index];
         }
+
         public int GetLength()
         {
             return SuperList.Count;
         }
-
     }
 }
