@@ -15,6 +15,7 @@ using System.Transactions;
 using System.Xml.Linq;
 using ConsoleAppHello.HomeTasks.HomeWork9;
 using ConsoleAppHello.HomeTasks.HomeWork9.Machines;
+using ConsoleAppHello.HomeTasks.HomeWorkDelegate;
 
 namespace ConsoleAppHello.HomeTasks
 {
@@ -22,6 +23,7 @@ namespace ConsoleAppHello.HomeTasks
     {
         static void Main(string[] args)
         {
+            //PriceMonitor monitor = new PriceMonitor(ShowPrice(50000));
         }
     }
 }
