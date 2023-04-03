@@ -37,6 +37,10 @@ namespace ConsoleAppHello.HomeTasks.HomeWorkLINQ
             }
         }
 
+        /// <summary>
+        /// возвращает предоставленный список пользователей, упорядоченный по LastName в порядке убывания.
+        /// </summary>
+        /// <param name="users"></param>
         public static void OrderUsersByLastName(List<User> users)
         {
             var seletedUsers = from u in users

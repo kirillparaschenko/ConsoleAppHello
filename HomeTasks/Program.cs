@@ -32,6 +32,13 @@ namespace ConsoleAppHello.HomeTasks
 
             User.GetFullName(users);
             User.OrderUsersByLastName(users);
+
+            string sentence = "sadf ee as ee d fgees a dfgsdf";
+
+            MethodsForStrings.GetFirstWordWithOneLetter(sentence);
+            MethodsForStrings.GetLastWordEE(sentence);
+            MethodsForStrings.GetLastWordWithParams(sentence, 3, 5);
+            MethodsForStrings.GetNumberOfUnickWords(sentence);
         }
     }
 }
