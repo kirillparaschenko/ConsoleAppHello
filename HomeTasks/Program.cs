@@ -15,6 +15,7 @@ using System.Transactions;
 using System.Xml.Linq;
 using ConsoleAppHello.HomeTasks.HomeWork9;
 using ConsoleAppHello.HomeTasks.HomeWork9.Machines;
+using ConsoleAppHello.HomeTasks.HomeWorkLINQ;
 
 namespace ConsoleAppHello.HomeTasks
 {
@@ -22,6 +23,15 @@ namespace ConsoleAppHello.HomeTasks
     {
         static void Main(string[] args)
         {
+            var users = new List<User>
+            {
+                new User("Иван", "Иванович", "Иванов"),
+                new User("Кирилл", "", "Кириллов"),
+                new User("Петр", "Петрович", "Петров")
+            };
+
+            User.GetFullName(users);
+            User.OrderUsersByLastName(users);
         }
     }
 }
