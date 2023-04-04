@@ -69,30 +69,47 @@ namespace ConsoleAppHello.HomeTasks.HomeWorkLINQ
         }
 
         /// <summary>
-        /// принимает список и извлекает значения с 5  элемента (включительно)  те значение которые содержат 3
+        /// принимает список и извлекает значения с 5  элемента (включительно)  те значения, которые содержат "3"
         /// </summary>
         /// <param name="words"></param>
-        public static void Method5(string[] words)
+        public static void GetElementsWith3(List<string> words)
         {
+            Regex regex = new Regex(@"\w*3\w*");
 
+            var selectedWords = from w in words.Skip(5) where regex.IsMatch(w) select w; 
+
+            foreach (var selectedWord in selectedWords)
+            {
+                Console.WriteLine(selectedWord);
+            }
         }
 
         /// <summary>
         /// возвращает длину самого короткого слова
         /// </summary>
         /// <param name="words"></param>
-        public static void Method6(string[] words)
+        public static void GetSmallestWord(List<string> words)
         {
+            var selectedWords = from w in words orderby w.Length select w;
 
+            Console.WriteLine($"Smallest word: {selectedWords.ElementAt(0)}");
         }
 
         /// <summary>
         /// преобразует словарь в список и меняет местами каждый ключ и значение
         /// </summary>
         /// <param name="words"></param>
-        public static void Method7(string[] words)
+        public static void ConvertDictonary(Dictionary<int, string> words)
         {
+            var newListValues = from w in words.Values select w;
+            var newListKeys = from w in words.Keys select w;
 
+            var newList = newListValues.Zip(newListKeys);
+
+            foreach (var word in newList)
+            {
+                Console.WriteLine(word);
+            }
         }
     }
 }

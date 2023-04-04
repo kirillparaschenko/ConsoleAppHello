@@ -39,6 +39,32 @@ namespace ConsoleAppHello.HomeTasks
             MethodsForStrings.GetLastWordEE(sentence);
             MethodsForStrings.GetLastWordWithParams(sentence, 3, 5);
             MethodsForStrings.GetNumberOfUnickWords(sentence);
+
+            var words = new List<string>()
+            {
+                "asdasdasd",
+                "asa3fdasfasf",
+                "3",
+                "asdadsadsada",
+                "qweqwesdsac4",
+                "33",
+                "asdasdsadvxvxcvs",
+                "sdfasdfafdsf3"
+            };
+
+            MethodsForStrings.GetElementsWith3(words);
+            MethodsForStrings.GetSmallestWord(words);
+
+            var dictonary = new Dictionary<int, string>()
+            {
+                {1, "a" },
+                {2, "b"},
+                {3, "c"},
+                {4, "d"},
+                {5, "e"},
+            };
+
+            MethodsForStrings.ConvertDictonary(dictonary);
         }
     }
 }
