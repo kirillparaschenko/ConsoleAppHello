@@ -25,9 +25,9 @@ namespace ConsoleAppHello.HomeTasks
         {
             var users = new List<User>
             {
-                new User("Иван", "Иванович", "Иванов"),
-                new User("Кирилл", "", "Кириллов"),
-                new User("Петр", "Петрович", "Петров")
+                new User("Ivan", "Ivanovich", "Ivanov"),
+                new User("Kirill", "", "Kirillov"),
+                new User("Petr", "Petrovich", "Petrov")
             };
 
             User.GetFullName(users);
