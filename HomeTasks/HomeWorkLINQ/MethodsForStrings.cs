@@ -76,7 +76,7 @@ namespace ConsoleAppHello.HomeTasks.HomeWorkLINQ
         {
             Regex regex = new Regex(@"\w*3\w*");
 
-            var selectedWords = from w in words.Skip(5) where regex.IsMatch(w) select w; 
+            var selectedWords = from w in words.Skip(4) where regex.IsMatch(w) select w; 
 
             foreach (var selectedWord in selectedWords)
             {
