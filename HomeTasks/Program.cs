@@ -16,6 +16,7 @@ using System.Xml.Linq;
 using ConsoleAppHello.HomeTasks.HomeWork9;
 using ConsoleAppHello.HomeTasks.HomeWork9.Machines;
 using ConsoleAppHello.HomeTasks.HomeWorkLINQ;
+using ConsoleAppHello.HomeTasks.HomeWorkDelegate;
 
 namespace ConsoleAppHello.HomeTasks
 {
@@ -65,6 +66,11 @@ namespace ConsoleAppHello.HomeTasks
             };
 
             MethodsForStrings.ConvertDictonary(dictonary);
+            var monitor = new PriceMonitor(ShowMethods.ShowPrice);
+            var subsriber1 = new Subscriber("test@test.test", 50000);
+
+            monitor.notify += subsriber1.SendEmail;
+            monitor.DisplayPrice();
         }
     }
 }
